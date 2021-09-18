@@ -1,38 +1,105 @@
 .App {
-  text-align: center;
+ padding: 15px;
+ outline: 1px solid #fff;
+ border: none;
+ max-width: 400px;
+ width: calc(100% - 30px);
+ box-sizing: border-box;
+ position: absolute;
+ border-top: 1px solid #fff;
+ top: 10%;
+ left: 0;
+ right: 0;
+ margin: 0 auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"] {
+ margin-right: 10px;
+ width: calc(100% - 85px);
+ outline: none;
+ padding: 10px;
+ box-sizing: border-box;
+ border: 1px solid #fff;
+ background: transparent;
+ color: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="submit"] {
+ padding: 10px 20px;
+ cursor: pointer;
+ width: 75px;
+ background: transparent;
+ border: 1px solid #fff;
+ color: #fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type="submit"]:active {
+ background: #fff;
+ color: #000;
 }
-
-.App-link {
-  color: #61dafb;
+legend {
+ padding: 8px 15px;
+ border: 1px solid #fff;
+ border-top: none;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ align-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+legend span {
+ width: 10px;
+ height: 10px;
+ display: block;
+ border-radius: 50%;
+}
+.rd {
+ background: #fc5753;
+ margin-right: 10px;
+}
+.yl {
+ background: #fdbc40;
+ margin-right: 10px;
+}
+.gn {
+ background: #33c748;
+}
+.list {
+ margin-top: 20px;
+ border-top: 1px solid #fff;
+}
+#msg {
+ margin: -10px 0 30px 0;
+ font-style: italic;
+ text-align: center;
+}
+ul {
+ padding: 10px 15px 1px 15px;
+ list-style: numeric;
+ list-style: decimal;
+}
+li {
+ cursor: pointer;
+ border: 1px solid #fff;
+ margin: 10px;
+ padding: 10px 40px 15px 10px;
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+li span {
+ border: 1px solid #fff;
+ padding: 2px 7px;
+ justify-content: center;
+ margin-right: -33px;
+ float: right;
+}
+li span:active {
+ background: #fff;
+ color: #000;
+}
+.done {
+ text-decoration: line-through;
+ opacity: 0.4;
+ border-style: dashed;
 }
