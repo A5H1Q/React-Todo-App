@@ -7,10 +7,12 @@
  box-sizing: border-box;
  position: absolute;
  border-top: 1px solid #fff;
- top: 10%;
+ top: 35px;
  left: 0;
  right: 0;
  margin: 0 auto;
+ background: #202020;
+ z-index: 9999;
 }
 input[type="text"] {
  margin-right: 10px;
@@ -103,11 +105,31 @@ li span:active {
  opacity: 0.4;
  border-style: dashed;
 }
+footer {
+ color: #ccc;
+ position: absolute;
+ bottom: 35px;
+ left: 0;
+ right: 0;
+ font-size: 12px;
+ margin: 0 auto;
+ text-align: center;
+}
+footer > a {
+ color: #ccc;
+ font-size: 12px;
+}
+
 @media screen and (max-width: 280px) {
  input[type="submit"] {
   display: none;
  }
  input[type="text"] {
   width: 100%;
+ }
+}
+@media screen and (min-width: 480px) {
+ .App {
+  top: 10%;
  }
 }

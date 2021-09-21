@@ -27,49 +27,54 @@ export default function App() {
  useEffect(() => handleMsg(), [todos]);
 
  return (
-  <form onSubmit={handleSubmit}>
-   <fieldset className="App">
-    <legend>
-     <span className="rd"></span>
-     <span className="yl"></span>
-     <span className="gn"></span>
-    </legend>
-    <input
-     placeholder="Type here"
-     type="text"
-     onChange={(e) => {
-      addNewTodo(e.target.value);
-     }}
-    />
+  <div>
+   <form onSubmit={handleSubmit}>
+    <fieldset className="App">
+     <legend>
+      <span className="rd"></span>
+      <span className="yl"></span>
+      <span className="gn"></span>
+     </legend>
+     <input
+      placeholder="Type here"
+      type="text"
+      onChange={(e) => {
+       addNewTodo(e.target.value);
+      }}
+     />
 
-    <input type="submit" value="ADD" onSubmit={handleSubmit} />
-    <div className="list">
-     <ul>
-      {/* Display todo */}
-      {todos.map((item) => (
-       <li
-        className={item.done ? "done" : "left"}
-        key={item.id}
-        onClick={() => {
-         item.done ? (item.done = false) : (item.done = true);
-         todoList([...todos]);
-        }}
-       >
-        <span
-         onClick={(e) => {
-          e.stopPropagation();
-          todoList(todos.filter((todos) => todos.id !== item.id));
+     <input type="submit" value="ADD" onSubmit={handleSubmit} />
+     <div className="list">
+      <ul>
+       {/* Display todo */}
+       {todos.map((item) => (
+        <li
+         className={item.done ? "done" : "left"}
+         key={item.id}
+         onClick={() => {
+          item.done ? (item.done = false) : (item.done = true);
+          todoList([...todos]);
          }}
         >
-         X
-        </span>
-        {item.text}
-       </li>
-      ))}
-     </ul>
-     {msg ? <div id="msg">looks empty :( You can fix that!</div> : null}
-    </div>
-   </fieldset>
-  </form>
+         <span
+          onClick={(e) => {
+           e.stopPropagation();
+           todoList(todos.filter((todos) => todos.id !== item.id));
+          }}
+         >
+          X
+         </span>
+         {item.text}
+        </li>
+       ))}
+      </ul>
+      {msg ? <div id="msg">looks empty :( You can fix that!</div> : null}
+     </div>
+    </fieldset>
+   </form>
+   <footer>
+    Made with ❤ by <a href="https://github.com/A5H1Q">Ashik saleem</a>
+   </footer>
+  </div>
  );
 }
